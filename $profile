@@ -1,0 +1,17 @@
+# Fucking windows man
+
+function docker() {
+    wsl docker @args
+}
+
+function dcu() {
+    docker-compose up @args
+}
+
+function dcd() {
+    docker-compose down -v @args
+}
+
+function c() {
+    code .
+}
