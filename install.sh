@@ -11,7 +11,7 @@ source ~/.zprofile
 
 # Starship
 echo Instaling Starship
-curl -sS https://starship.rs/install.sh | sh
+curl -sS https://starship.rs/install.sh | sh -s -- -y
 mkdir -p ~/.config/
 cp .starship.toml  ~/.config/
 
