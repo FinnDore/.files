@@ -1,6 +1,6 @@
 
+eval "$(starship init zsh)"
 # Aliases
-
 # Vs code
 alias c='code .'
 
