@@ -1,5 +1,5 @@
 To install
 
 ```bash
-curl https://github.com/FinnDore/.files/blob/main/install.sh -q | sh
+curl -sSL https://raw.githubusercontent.com/FinnDore/.files/main/install.sh | sh
 ```
