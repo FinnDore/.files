@@ -1,6 +1,6 @@
 # Setup
-echo installing git and youtube-dl
-brew install git youtube-dl
+echo installing git, youtube-dl, stripe/stripe-cli/stripe
+brew install git youtube-dl stripe/stripe-cli/stripe
 git clone https://github.com/FinnDore/.files/
 cd .files
 
