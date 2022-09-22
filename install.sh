@@ -1,5 +1,5 @@
 # Setup
-echo installing git, youtube-dl, stripe/stripe-cli/stripe
+echo installing git, youtube-dl, stripe/stripe-cli/stripe gnupg dopplerhq/cli/doppler
 brew install git youtube-dl stripe/stripe-cli/stripe
 git clone https://github.com/FinnDore/.files/
 cd .files
