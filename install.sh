@@ -1,5 +1,5 @@
 # Setup
-echo installing git, youtube-dl, stripe/stripe-cli/stripe gnupg dopplerhq/cli/doppler
+echo installing git, youtube-dl, stripe/stripe-cli/stripe gnupg dopplerhq/cli/doppler railwayapp/tap/nixpacks
 brew install git youtube-dl stripe/stripe-cli/stripe gnupg dopplerhq/cli/doppler
 git clone https://github.com/FinnDore/.files/
 cd .files
