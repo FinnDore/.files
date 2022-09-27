@@ -18,3 +18,5 @@ cp .starship.toml  ~/.config/
 # Fonts 
 echo Installing Fonts
 cp ./fonts/* ~/Library/Fonts
+
+./desktop.scpt
