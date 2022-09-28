@@ -1,5 +1,5 @@
 # Setup
-echo installing packages and apps using
+echo installing packages and apps
 brew install git youtube-dl stripe/stripe-cli/stripe gnupg dopplerhq/cli/doppler
 brew install --cask visual-studio-code discord warp microsoft-edge github figma nordpass
 
@@ -7,6 +7,7 @@ git clone https://github.com/FinnDore/.files/
 cd .files
 
 # Node 
+echo Installing Node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -14,6 +15,7 @@ nvm install --lts
 nvm use --lts
 
 # Rust
+echo Installing rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | ssh -s -- -y
 rustup component add clippy
 rustup install cargo-insta
@@ -34,5 +36,6 @@ echo Installing Fonts
 cp ./fonts/* ~/Library/Fonts
 
 # Desktop Pictures
+echo Setting desktop background
 sh set-desktop-picture.sh $(pwd)/backgrounds/background.jpg
 cp -R ./emojis ~/Pictures/emojis
