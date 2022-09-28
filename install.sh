@@ -1,8 +1,22 @@
 # Setup
-echo installing git, youtube-dl, stripe/stripe-cli/stripe gnupg dopplerhq/cli/doppler railwayapp/tap/nixpacks
+echo installing packages and apps using
 brew install git youtube-dl stripe/stripe-cli/stripe gnupg dopplerhq/cli/doppler
+brew install --cask visual-studio-code discord warp microsoft-edge github figma nordpass
+
 git clone https://github.com/FinnDore/.files/
 cd .files
+
+# Node 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+nvm install --lts
+nvm use --lts
+
+# Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | ssh -s -- -y
+rustup component add clippy
+rustup install cargo-insta
 
 # ZSH
 echo Setting up ZSH
@@ -19,4 +33,6 @@ cp .starship.toml  ~/.config/
 echo Installing Fonts
 cp ./fonts/* ~/Library/Fonts
 
-osascpt ./desktop.scpt
+# Desktop Pictures
+sh set-desktop-picture.sh $(pwd)/backgrounds/background.jpg
+cp -R ./emojis ~/Pictures/emojis

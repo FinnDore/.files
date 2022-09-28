@@ -5,8 +5,8 @@ eval "$(starship init zsh)"
 alias c='code .'
 
 # Docker
-alias dcu='docker-compose up'
-alias dcd='docker-compose down -v'
+alias dcu='docker-compose up $1'
+alias dcd='docker-compose down -v $1'
 
 # Windows habbits
 alias cls=clear

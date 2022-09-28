@@ -1,11 +1,100 @@
 {
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
     },
-    "hide-files.files": []
+
+    "prettier.endOfLine": "auto",
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+
+    "notebook.lineNumbers": "on",
+
+    "editor.renderWhitespace": "all",
+    "editor.fontLigatures": true,
+
+    "typescript.tsserver.maxTsServerMemory": 8162,
+    "typescript.preferences.importModuleSpecifier": "shortest",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "scss.lint.zeroUnits": "warning",
+
+    "errorLens.exclude": [
+        "^trailing whitespace.*$",
+        "^misplaced opening brace.*$",
+        "^block is empty.*$",
+        "^statements are not aligned.*$"
+    ],
+    "errorLens.excludeBySource": ["cSpell"],
+
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[yml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "redhat.telemetry.enabled": false,
+
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggestSelection": "first",
+    "editor.fontFamily": "FiraCode Nerd Font",
+    "editor.fontWeight": "normal",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestionsDelay": 0,
+    "editor.suggest.insertMode": "replace",
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.guides.highlightActiveIndentation": true,
+    "editor.bracketPairColorization.enabled": true,
+
+    "workbench.editor.wrapTabs": true,
+    "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨",
+
+    "explorer.confirmDragAndDrop": false,
+
+    "terminal.integrated.fontFamily": "FiraMono Nerd Font",
+
+    "diffEditor.ignoreTrimWhitespace": false,
+
+    "git.autofetch": true,
+    "githubPullRequests.pullBranch": "never",
+    "githubPullRequests.queries": [
+        {
+            "label": "Waiting For My Review",
+            "query": "is:open review-requested:${user}"
+        },
+        {
+            "label": "Assigned To Me",
+            "query": "is:open assignee:${user}"
+        },
+        {
+            "label": "Created By Me",
+            "query": "is:open author:${user}"
+        }
+    ],
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": true,
+        "markdown": false
+    },
+
+    "explorer.confirmDelete": false
 }
