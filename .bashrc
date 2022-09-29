@@ -11,4 +11,4 @@ alias dcd='docker-compose down -v $1'
 # Windows habbits
 alias cls=clear
 
-export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/opt/homebrew/anaconda3/bin"
