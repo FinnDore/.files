@@ -6,6 +6,10 @@ brew install --cask visual-studio-code discord warp microsoft-edge github figma 
 git clone https://github.com/FinnDore/.files/
 cd .files
 
+# Vs code 
+cp ./.vscode/settings.json ~/Library/Application Support/Code/User/
+cp ./.vscode/keybindings.json ~/Library/Application Support/Code/User/
+
 # Node 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -36,3 +40,5 @@ cp ./fonts/* ~/Library/Fonts
 # Desktop Pictures
 sh set-desktop-picture.sh $(pwd)/backgrounds/background.jpg
 cp -R ./emojis ~/Pictures/emojis
+
+cat ./other.md
