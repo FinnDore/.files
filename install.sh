@@ -1,10 +1,14 @@
 # Setup
 echo installing packages and apps
 brew install git youtube-dl stripe/stripe-cli/stripe gnupg dopplerhq/cli/doppler
-brew install --cask visual-studio-code discord warp microsoft-edge github figma nordpass
+brew install --cask visual-studio-code discord warp microsoft-edge github figma nordpass anaconda
 
 git clone https://github.com/FinnDore/.files/
 cd .files
+
+# Vs code 
+cp ./.vscode/settings.json ~/Library/Application Support/Code/User/
+cp ./.vscode/keybindings.json ~/Library/Application Support/Code/User/
 
 # Node 
 echo Installing Node
@@ -39,3 +43,5 @@ cp ./fonts/* ~/Library/Fonts
 echo Setting desktop background
 sh set-desktop-picture.sh $(pwd)/backgrounds/background.jpg
 cp -R ./emojis ~/Pictures/emojis
+
+cat ./other.md
