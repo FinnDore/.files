@@ -1,7 +1,7 @@
 # Setup
 echo installing packages and apps
 brew install git youtube-dl stripe/stripe-cli/stripe gnupg dopplerhq/cli/doppler
-brew install --cask visual-studio-code discord warp microsoft-edge github figma nordpass anaconda
+brew install --cask visual-studio-code discord warp microsoft-edge github figma nordpass
 
 git clone https://github.com/FinnDore/.files/
 cd .files
@@ -45,3 +45,6 @@ sh set-desktop-picture.sh $(pwd)/backgrounds/background.jpg
 cp -R ./emojis ~/Pictures/emojis
 
 cat ./other.md
+
+cd ..
+rm -rf .files
