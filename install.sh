@@ -1,3 +1,6 @@
+# Install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 # Setup
 echo installing packages and apps
 brew install git youtube-dl stripe/stripe-cli/stripe gnupg dopplerhq/cli/doppler
