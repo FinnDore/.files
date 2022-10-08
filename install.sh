@@ -1,6 +1,12 @@
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# ZSH
+echo Setting up ZSH
+cp ./.zprofile ~/.zprofile
+source ~/.zprofile
+cp ./.bashrc ~/.bashrc
+
 # Setup
 echo installing packages and apps
 brew install git youtube-dl stripe/stripe-cli/stripe gnupg dopplerhq/cli/doppler
@@ -26,11 +32,6 @@ echo Installing rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | ssh -s -- -y
 rustup component add clippy
 rustup install cargo-insta
-
-# ZSH
-echo Setting up ZSH
-cp ./.zprofile ~/.zprofile
-source ~/.zprofile
 
 # Starship
 echo Instaling Starship

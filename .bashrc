@@ -7,6 +7,8 @@ alias c='code .'
 # Docker
 alias dcu='docker-compose up $1'
 alias dcd='docker-compose down -v $1'
+alias dcb='docker-compose build $1'
+alias dck='docker-compose kill $(docker ps -q)'
 
 # Windows habbits
 alias cls=clear
