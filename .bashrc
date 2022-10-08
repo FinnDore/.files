@@ -10,6 +10,9 @@ alias dcd='docker-compose down -v $1'
 alias dcb='docker-compose build $1'
 alias dck='docker kill $(docker ps -q)'
 
+# Doppler
+alias d='doppler run -- $1'
+
 # Windows habbits
 alias cls=clear
 
