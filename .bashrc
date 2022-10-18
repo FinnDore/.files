@@ -3,6 +3,7 @@ eval "$(starship init zsh)"
 # Aliases
 # Vs code
 alias c='code .'
+alias ll="ls -la"
 
 # Docker
 alias dcu='docker-compose up $1'
