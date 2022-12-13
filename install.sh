@@ -48,6 +48,9 @@ echo Setting desktop background
 sh set-desktop-picture.sh $(pwd)/backgrounds/background.tif
 cp -R ./emojis ~/Pictures/emojis
 
+# Mac shit
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
 cat ./other.md
 
 cd ..
