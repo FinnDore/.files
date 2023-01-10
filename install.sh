@@ -54,4 +54,4 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 cat ./other.md
 
 cd ..
-rm -rf .files
+rm -r .files
