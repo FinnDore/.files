@@ -21,6 +21,6 @@ export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PA
 
 cd ~/Documents/GitHub
 
-if [ $pwd = '~/' ]; then
+if [ $PWD = '/home/finn' ]; then
     cd ~/Documents/GitHub
 fi
