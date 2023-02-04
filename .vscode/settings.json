@@ -96,5 +96,7 @@
         "markdown": false
     },
 
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "editor.lineNumbers": "relative",
+    "editor.suggest.snippetsPreventQuickSuggestions": false
 }
