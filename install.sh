@@ -45,7 +45,7 @@ cp ./fonts/* ~/Library/Fonts
 
 # Desktop Pictures
 echo Setting desktop background
-sh set-desktop-picture.sh $(pwd)/backgrounds/background.tif
+sh set-desktop-picture.sh $(pwd)/backgrounds/background.png
 cp -R ./emojis ~/Pictures/emojis
 
 # Mac shit
