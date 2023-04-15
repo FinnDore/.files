@@ -9,11 +9,15 @@ cp ./.bashrc ~/.bashrc
 
 # Setup
 echo installing packages and apps
-brew install git youtube-dl stripe/stripe-cli/stripe gnupg dopplerhq/cli/doppler docker docker-compose colima gh
+brew install git youtube-dl stripe/stripe-cli/stripe gnupg dopplerhq/cli/doppler docker docker-compose colima gh pinentry-mac
 brew install --cask visual-studio-code discord warp microsoft-edge github figma nordpass raycast btop arc
 
 git clone https://github.com/FinnDore/.files/
 cd .files
+
+# commit signing
+echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
+killall gpg-agent
 
 # Vs code 
 cp ./.vscode/settings.json ~/Library/Application Support/Code/User/
