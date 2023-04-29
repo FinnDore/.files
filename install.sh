@@ -20,8 +20,11 @@ echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
 killall gpg-agent
 
 # Vs code 
-cp ./.vscode/settings.json ~/Library/Application Support/Code/User/
-cp ./.vscode/keybindings.json ~/Library/Application Support/Code/User/
+cp -p .vscode/settings.json ~/Library/Application Support/Code/User/
+cp -p .vscode/keybindings.json ~/Library/Application Support/Code/User/
+
+# Nvim
+cp -r -p nvim ~/.config/nvim
 
 # Node 
 echo Installing Node

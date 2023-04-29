@@ -94,7 +94,7 @@ require('lazy').setup({
 
   { -- Autocompletion
     'hrsh7th/nvim-cmp',
-    dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
+    dependencies = { 'hrsh7th/cmp-nvim-lsp' },
   },
 
   -- Useful plugin to show you pending keybinds.
@@ -113,14 +113,14 @@ require('lazy').setup({
     },
   },
   {
-    'kvrohit/mellow.nvim',
+    'finndore/mellow.nvim',
     priority = 1000,
     config = function() 
       vim.cmd [[colorscheme mellow]]
-      vim.api.nvim_set_hl(0, "Normal", { bg = '#000000' })
     end
   },
-  { -- Set lualine as statusline
+  {
+   -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
     opts = {
@@ -412,12 +412,7 @@ local servers = {
   -- rust_analyzer = {},
   -- tsserver = {},
 
-  lua_ls = {
-    Lua = {
-      workspace = { checkThirdParty = false },
-      telemetry = { enable = false },
-    },
-  },
+
 }
 
 -- Setup neovim lua configuration
@@ -446,16 +441,8 @@ mason_lspconfig.setup_handlers {
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
-local luasnip = require 'luasnip'
-
-luasnip.config.setup {}
 
 cmp.setup {
-  snippet = {
-    expand = function(args)
-      luasnip.lsp_expand(args.body)
-    end,
-  },
   mapping = cmp.mapping.preset.insert {
     ['<C-n>'] = cmp.mapping.select_next_item(),
     ['<C-p>'] = cmp.mapping.select_prev_item(),
