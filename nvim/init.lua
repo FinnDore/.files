@@ -74,6 +74,7 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   { -- LSP Configuration & Plugins
@@ -97,6 +98,10 @@ require('lazy').setup({
     dependencies = { 'hrsh7th/cmp-nvim-lsp' },
   },
 
+  {
+    'windwp/nvim-ts-autotag'
+  },
+
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
   { -- Adds git releated signs to the gutter, as well as utilities for managing changes
@@ -114,9 +119,10 @@ require('lazy').setup({
   },
   {
     'finndore/mellow.nvim',
-    priority = 1000,
     config = function() 
       vim.cmd [[colorscheme mellow]]
+      vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+      vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
     end
   },
   {
@@ -138,7 +144,8 @@ require('lazy').setup({
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
     opts = {
-      char = '┊',
+      space_char_blankline = " ",
+      indent_blankline_char_list_blankline = '|', '¦', '┆', '┊',
       show_trailing_blankline_indent = false,
     },
   },
@@ -185,11 +192,17 @@ require('lazy').setup({
   --    An additional note is that if you only copied in the `init.lua`, you can just comment this line
   --    to get rid of the warning telling you that there are not plugins in `lua/custom/plugins/`.
   { import = 'custom.plugins' },
+  { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+  { import = "lazyvim.plugins.extras.formatting.prettier" },
+  
 }, {})
+
+vim.opt.list = true
+vim.opt.listchars:append "space:⋅"
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
-
+--
 -- Set highlight on search
 vim.o.hlsearch = false
 
@@ -411,8 +424,7 @@ local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
-
-
+  
 }
 
 -- Setup neovim lua configuration
@@ -424,7 +436,6 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- Ensure the servers above are installed
 local mason_lspconfig = require 'mason-lspconfig'
-
 mason_lspconfig.setup {
   ensure_installed = vim.tbl_keys(servers),
 }
@@ -477,6 +488,10 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+
+require("notify").setup({
+  background_colour = "#000000",
+})
 
 
 -- The line beneath this is called `modeline`. See `:help modeline`
