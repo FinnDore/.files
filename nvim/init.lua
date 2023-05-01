@@ -37,7 +37,7 @@ P.S. You can delete this when you're done too. It's your config now :)
 --]]
 
 -- Set <space> as the leader key
--- See `:help mapleader`
+
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -93,11 +93,7 @@ require("lazy").setup({
 
 	{ -- Autocompletion
 		"hrsh7th/nvim-cmp",
-		dependencies = { "hrsh7th/cmp-nvim-lsp", 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
-	},
-
-	{
-		"windwp/nvim-ts-autotag",
+		dependencies = { "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip", "saadparwaiz1/cmp_luasnip" },
 	},
 
 	-- Useful plugin to show you pending keybinds.
@@ -190,8 +186,15 @@ require("lazy").setup({
 	--    to get rid of the warning telling you that there are not plugins in `lua/custom/plugins/`.
 	{ import = "custom.plugins" },
 	{ "LazyVim/LazyVim", import = "lazyvim.plugins" },
-  { import = "lazyvim.plugins.extras.lang.json" },
-  { import = "lazyvim.plugins.extras.linting.eslint" },
+	{ import = "lazyvim.plugins.extras.lang.json" },
+	{
+		import = "lazyvim.plugins.extras.coding.copilot",
+		opts = {
+			suggestion = { enabled = true },
+			panel = { enabled = false },
+		},
+	},
+	{ import = "lazyvim.plugins.extras.linting.eslint" },
 }, {})
 
 vim.opt.list = true
@@ -465,9 +468,9 @@ mason_lspconfig.setup_handlers({
 
 -- nvim-cmp setup
 local cmp = require("cmp")
-local luasnip = require 'luasnip'
+local luasnip = require("luasnip")
 
-luasnip.config.setup {}
+luasnip.config.setup({})
 
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
