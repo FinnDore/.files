@@ -6,9 +6,9 @@ alias c='code .'
 alias ll="ls -l"
 
 # Docker
-alias dcu='docker-compose up $1'
-alias dcd='docker-compose down -v $1'
-alias dcb='docker-compose build $1'
+alias dcu='docker compose up $1'
+alias dcd='docker compose down -v $1'
+alias dcb='docker compose build $1'
 alias dck='docker kill $(docker ps -q)'
 
 # Doppler
