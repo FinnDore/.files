@@ -3,9 +3,9 @@
 
 # ZSH
 echo Setting up ZSH
-cp ./.zprofile ~/.zprofile
+cp .zprofile ~/.zprofile
 source ~/.zprofile
-cp ./.bashrc ~/.bashrc
+cp .bashrc ~/.bashrc
 
 # Setup
 echo installing packages and apps
@@ -20,8 +20,9 @@ echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
 killall gpg-agent
 
 # Vs code 
-cp -p .vscode/settings.json ~/Library/Application Support/Code/User/
-cp -p .vscode/keybindings.json ~/Library/Application Support/Code/User/
+mkdir -p ~/Library/Application Support/Code/User
+cp .vscode/settings.json ~/Library/Application Support/Code/User/
+cp .vscode/keybindings.json ~/Library/Application Support/Code/User/
 
 # Nvim
 cp -r -p nvim ~/.config/nvim
@@ -46,6 +47,10 @@ curl -sS https://starship.rs/install.sh | sh -s -- -y
 mkdir -p ~/.config/
 cp .starship.toml  ~/.config/
 
+# warp
+mkdir -p ~/.warp/themes
+cp .warp/themes/* ~/.warp/themes
+
 # Fonts 
 echo Installing Fonts
 cp ./fonts/* ~/Library/Fonts
@@ -58,7 +63,7 @@ cp -R ./emojis ~/Pictures/emojis
 # Mac shit
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
-cat ./other.md
+cat other.md
 
 cd ..
 rm -r .files
