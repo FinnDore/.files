@@ -9,7 +9,7 @@ cp .bashrc ~/.bashrc
 
 # Setup
 echo installing packages and apps
-brew install git youtube-dl stripe/stripe-cli/stripe gnupg dopplerhq/cli/doppler docker docker-compose colima gh pinentry-mac
+brew install git youtube-dl stripe/stripe-cli/stripe gnupg dopplerhq/cli/doppler docker docker-compose colima gh pinentry-mac tailscale
 brew install --cask visual-studio-code discord warp microsoft-edge github figma nordpass raycast btop arc gimp
 
 git clone https://github.com/FinnDore/.files/
