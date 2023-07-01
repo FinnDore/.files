@@ -66,3 +66,6 @@ symbol = "🅢 "
 
 [rust]
 symbol = " "
+
+[line_break]
+disabled = true
