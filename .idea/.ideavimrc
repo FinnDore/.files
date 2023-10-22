@@ -1,0 +1,5 @@
+sethandler <C-B> a:ide
+sethandler <C-D> a:vim
+sethandler <C-P> a:ide
+set incsearch
+<Plug>Commentary
