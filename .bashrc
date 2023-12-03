@@ -3,6 +3,7 @@ eval "$(starship init zsh)"
 # Aliases
 # Vs code
 alias c='code .'
+alias v='nvim .'
 alias ll="ls -l"
 
 # Docker
