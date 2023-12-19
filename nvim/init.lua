@@ -241,6 +241,8 @@ require('lazy').setup({
   -- { import = 'custom.plugins' },
 }, {})
 
+vim.wo.relativenumber = true
+vim.opt.winbar = "%=%m %f"
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
