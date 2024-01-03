@@ -1,7 +1,7 @@
 {
     "workbench.iconTheme": "material-icon-theme",
     "editor.codeActionsOnSave": {
-        "source.organizeImports": true
+        "source.organizeImports": "explicit"
     },
 
     "prettier.endOfLine": "auto",
@@ -70,25 +70,8 @@
     "explorer.confirmDragAndDrop": false,
 
     "terminal.integrated.fontFamily": "FiraMono Nerd Font",
-
     "diffEditor.ignoreTrimWhitespace": false,
-
     "git.autofetch": true,
-    "githubPullRequests.pullBranch": "never",
-    "githubPullRequests.queries": [
-        {
-            "label": "Waiting For My Review",
-            "query": "is:open review-requested:${user}"
-        },
-        {
-            "label": "Assigned To Me",
-            "query": "is:open assignee:${user}"
-        },
-        {
-            "label": "Created By Me",
-            "query": "is:open author:${user}"
-        }
-    ],
     "github.copilot.enable": {
         "*": true,
         "yaml": false,
@@ -98,5 +81,6 @@
 
     "explorer.confirmDelete": false,
     "editor.lineNumbers": "relative",
-    "editor.suggest.snippetsPreventQuickSuggestions": false
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "workbench.editor.showTabs": "none"
 }
