@@ -64,7 +64,6 @@
     "editor.guides.highlightActiveIndentation": true,
     "editor.bracketPairColorization.enabled": true,
 
-    "workbench.editor.wrapTabs": true,
     "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨",
 
     "explorer.confirmDragAndDrop": false,
@@ -82,5 +81,6 @@
     "explorer.confirmDelete": false,
     "editor.lineNumbers": "relative",
     "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "workbench.activityBar.location": "hidden",
     "workbench.editor.showTabs": "none"
 }
