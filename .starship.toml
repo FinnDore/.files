@@ -70,6 +70,3 @@ symbol = " "
 
 [line_break]
 disabled = true
-
-[aws]
-disabled=true
